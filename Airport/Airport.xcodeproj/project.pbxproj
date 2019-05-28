@@ -13,6 +13,9 @@
 		CB1B9E2D2294F9D9002CD2C6 /* Airport.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB1B9E2B2294F9D8002CD2C6 /* Airport.xcdatamodeld */; };
 		CB1B9E2F2294F9DB002CD2C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1B9E2E2294F9DB002CD2C6 /* Assets.xcassets */; };
 		CB1B9E322294F9DB002CD2C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1B9E302294F9DB002CD2C6 /* LaunchScreen.storyboard */; };
+		CBA856DF229DF0AB00390FE4 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856DE229DF0AB00390FE4 /* TableController.swift */; };
+		CBA856E1229DF93F00390FE4 /* TableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856E0229DF93F00390FE4 /* TableCells.swift */; };
+		CBA856E5229DFBAF00390FE4 /* TableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856E4229DFBAF00390FE4 /* TableData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		CB1B9E2E2294F9DB002CD2C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB1B9E312294F9DB002CD2C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB1B9E332294F9DB002CD2C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBA856DE229DF0AB00390FE4 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
+		CBA856E0229DF93F00390FE4 /* TableCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCells.swift; sourceTree = "<group>"; };
+		CBA856E4229DFBAF00390FE4 /* TableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				CB1B9E302294F9DB002CD2C6 /* LaunchScreen.storyboard */,
 				CB1B9E332294F9DB002CD2C6 /* Info.plist */,
 				CB1B9E2B2294F9D8002CD2C6 /* Airport.xcdatamodeld */,
+				CBA856DE229DF0AB00390FE4 /* TableController.swift */,
+				CBA856E0229DF93F00390FE4 /* TableCells.swift */,
+				CBA856E4229DFBAF00390FE4 /* TableData.swift */,
 			);
 			path = Airport;
 			sourceTree = "<group>";
@@ -138,6 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA856E5229DFBAF00390FE4 /* TableData.swift in Sources */,
+				CBA856DF229DF0AB00390FE4 /* TableController.swift in Sources */,
+				CBA856E1229DF93F00390FE4 /* TableCells.swift in Sources */,
 				CB1B9E272294F9D8002CD2C6 /* ViewController.swift in Sources */,
 				CB1B9E252294F9D8002CD2C6 /* AppDelegate.swift in Sources */,
 				CB1B9E2D2294F9D9002CD2C6 /* Airport.xcdatamodeld in Sources */,
