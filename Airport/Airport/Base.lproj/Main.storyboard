@@ -5,7 +5,7 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="61" id="QUU-Il-VMe" userLabel="Header Cell" customClass="HeaderCell" customModule="Airport" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="61" id="QUU-Il-VMe" userLabel="Header Cell">
                                 <rect key="frame" x="0.0" y="28" width="414" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QUU-Il-VMe" id="zlM-Ls-UlT">
@@ -43,7 +43,7 @@
                                     <outlet property="headerText" destination="JuU-Pe-ieq" id="hVp-lD-B97"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContentCell" id="ZUP-qy-1Zw" userLabel="Content Cell" customClass="ContentCell" customModule="Airport" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContentCell" id="ZUP-qy-1Zw" userLabel="Content Cell">
                                 <rect key="frame" x="0.0" y="89" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZUP-qy-1Zw" id="C8k-yS-TFO">
@@ -68,7 +68,7 @@
                                     <outlet property="contentText" destination="qGp-1O-tW2" id="Ej7-SJ-h8Y"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MapCell" rowHeight="207" id="UPa-5W-EOW" userLabel="Map Cell" customClass="MapCell" customModule="Airport" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MapCell" rowHeight="207" id="UPa-5W-EOW" userLabel="Map Cell">
                                 <rect key="frame" x="0.0" y="133" width="414" height="207"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UPa-5W-EOW" id="CTr-bJ-bRT">
@@ -93,7 +93,7 @@
                                     <outlet property="mapView" destination="UFA-Ts-7N7" id="HYw-VK-adY"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="207" id="sy8-e8-zJr" userLabel="Image Cell" customClass="ImageCell" customModule="Airport" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageCell" rowHeight="207" id="sy8-e8-zJr" userLabel="Image Cell">
                                 <rect key="frame" x="0.0" y="340" width="414" height="207"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sy8-e8-zJr" id="UmF-bn-hRa">
@@ -115,33 +115,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="mapImage" destination="7Xc-bU-xzT" id="M13-ct-Xpr"/>
+                                    <outlet property="imageView" destination="7Xc-bU-xzT" id="cQy-ov-Ec7"/>
                                 </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppCell" rowHeight="91" id="MCj-Ib-WMZ" userLabel="App Cell">
-                                <rect key="frame" x="0.0" y="547" width="414" height="91"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MCj-Ib-WMZ" id="arC-8Y-oxV">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oIS-mW-IRd">
-                                            <rect key="frame" x="20" y="10" width="374" height="71"/>
-                                            <color key="backgroundColor" white="0.93402183219178081" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <real key="value" value="20"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="oIS-mW-IRd" firstAttribute="top" secondItem="arC-8Y-oxV" secondAttribute="top" constant="10" id="DRO-HZ-vPh"/>
-                                        <constraint firstAttribute="bottom" secondItem="oIS-mW-IRd" secondAttribute="bottom" constant="10" id="FJa-pc-Kvv"/>
-                                        <constraint firstAttribute="trailing" secondItem="oIS-mW-IRd" secondAttribute="trailing" constant="20" id="QXb-Ta-gpb"/>
-                                        <constraint firstItem="oIS-mW-IRd" firstAttribute="leading" secondItem="arC-8Y-oxV" secondAttribute="leading" constant="20" id="qxy-K5-sS6"/>
-                                    </constraints>
-                                </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>

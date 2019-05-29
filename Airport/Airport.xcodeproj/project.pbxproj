@@ -15,7 +15,15 @@
 		CB1B9E322294F9DB002CD2C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1B9E302294F9DB002CD2C6 /* LaunchScreen.storyboard */; };
 		CBA856DF229DF0AB00390FE4 /* TableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856DE229DF0AB00390FE4 /* TableController.swift */; };
 		CBA856E1229DF93F00390FE4 /* TableCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856E0229DF93F00390FE4 /* TableCells.swift */; };
-		CBA856E5229DFBAF00390FE4 /* TableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856E4229DFBAF00390FE4 /* TableData.swift */; };
+		CBA856E5229DFBAF00390FE4 /* Old Table Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856E4229DFBAF00390FE4 /* Old Table Data.swift */; };
+		CBA856E8229E158000390FE4 /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856E7229E158000390FE4 /* MapCell.swift */; };
+		CBA856EA229E158A00390FE4 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856E9229E158A00390FE4 /* HeaderCell.swift */; };
+		CBA856EC229E159300390FE4 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856EB229E159300390FE4 /* ContentCell.swift */; };
+		CBA856EE229E163800390FE4 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856ED229E163800390FE4 /* AppCell.swift */; };
+		CBA856F0229E16B000390FE4 /* AppViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856EF229E16B000390FE4 /* AppViews.swift */; };
+		CBA856F4229E1A5A00390FE4 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856F3229E1A5A00390FE4 /* AppData.swift */; };
+		CBA856F7229E1A8800390FE4 /* TableProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856F6229E1A8800390FE4 /* TableProtocols.swift */; };
+		CBA856F9229E1AE700390FE4 /* TableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA856F8229E1AE700390FE4 /* TableData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +37,15 @@
 		CB1B9E332294F9DB002CD2C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBA856DE229DF0AB00390FE4 /* TableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableController.swift; sourceTree = "<group>"; };
 		CBA856E0229DF93F00390FE4 /* TableCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCells.swift; sourceTree = "<group>"; };
-		CBA856E4229DFBAF00390FE4 /* TableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableData.swift; sourceTree = "<group>"; };
+		CBA856E4229DFBAF00390FE4 /* Old Table Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Old Table Data.swift"; sourceTree = "<group>"; };
+		CBA856E7229E158000390FE4 /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
+		CBA856E9229E158A00390FE4 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		CBA856EB229E159300390FE4 /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
+		CBA856ED229E163800390FE4 /* AppCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
+		CBA856EF229E16B000390FE4 /* AppViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViews.swift; sourceTree = "<group>"; };
+		CBA856F3229E1A5A00390FE4 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		CBA856F6229E1A8800390FE4 /* TableProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableProtocols.swift; sourceTree = "<group>"; };
+		CBA856F8229E1AE700390FE4 /* TableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,10 @@
 		CB1B9E232294F9D8002CD2C6 /* Airport */ = {
 			isa = PBXGroup;
 			children = (
+				CBA856F5229E1A6900390FE4 /* Protocols */,
+				CBA856F2229E1A4900390FE4 /* Models */,
+				CBA856F1229E16B800390FE4 /* Views */,
+				CBA856E6229E157400390FE4 /* Cells */,
 				CB1B9E242294F9D8002CD2C6 /* AppDelegate.swift */,
 				CB1B9E262294F9D8002CD2C6 /* ViewController.swift */,
 				CB1B9E282294F9D8002CD2C6 /* Main.storyboard */,
@@ -71,9 +91,45 @@
 				CB1B9E2B2294F9D8002CD2C6 /* Airport.xcdatamodeld */,
 				CBA856DE229DF0AB00390FE4 /* TableController.swift */,
 				CBA856E0229DF93F00390FE4 /* TableCells.swift */,
-				CBA856E4229DFBAF00390FE4 /* TableData.swift */,
+				CBA856E4229DFBAF00390FE4 /* Old Table Data.swift */,
 			);
 			path = Airport;
+			sourceTree = "<group>";
+		};
+		CBA856E6229E157400390FE4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CBA856E7229E158000390FE4 /* MapCell.swift */,
+				CBA856E9229E158A00390FE4 /* HeaderCell.swift */,
+				CBA856EB229E159300390FE4 /* ContentCell.swift */,
+				CBA856ED229E163800390FE4 /* AppCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CBA856F1229E16B800390FE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CBA856EF229E16B000390FE4 /* AppViews.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CBA856F2229E1A4900390FE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CBA856F3229E1A5A00390FE4 /* AppData.swift */,
+				CBA856F8229E1AE700390FE4 /* TableData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CBA856F5229E1A6900390FE4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CBA856F6229E1A8800390FE4 /* TableProtocols.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,11 +203,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBA856E5229DFBAF00390FE4 /* TableData.swift in Sources */,
+				CBA856E5229DFBAF00390FE4 /* Old Table Data.swift in Sources */,
+				CBA856F0229E16B000390FE4 /* AppViews.swift in Sources */,
+				CBA856F7229E1A8800390FE4 /* TableProtocols.swift in Sources */,
 				CBA856DF229DF0AB00390FE4 /* TableController.swift in Sources */,
 				CBA856E1229DF93F00390FE4 /* TableCells.swift in Sources */,
+				CBA856EC229E159300390FE4 /* ContentCell.swift in Sources */,
 				CB1B9E272294F9D8002CD2C6 /* ViewController.swift in Sources */,
+				CBA856EE229E163800390FE4 /* AppCell.swift in Sources */,
+				CBA856F4229E1A5A00390FE4 /* AppData.swift in Sources */,
+				CBA856EA229E158A00390FE4 /* HeaderCell.swift in Sources */,
 				CB1B9E252294F9D8002CD2C6 /* AppDelegate.swift in Sources */,
+				CBA856E8229E158000390FE4 /* MapCell.swift in Sources */,
+				CBA856F9229E1AE700390FE4 /* TableData.swift in Sources */,
 				CB1B9E2D2294F9D9002CD2C6 /* Airport.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

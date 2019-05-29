@@ -1,5 +1,5 @@
 //
-//  HeaderCell.swift
+//  TableDataModel.swift
 //  Airport
 //
 //  Created by Charlie on 29/5/19.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+enum TableDataType {
+	case Header, Content, Map, App
+}

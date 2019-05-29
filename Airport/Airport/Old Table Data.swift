@@ -9,13 +9,6 @@
 import Foundation
 import CoreLocation
 
-enum TableDataType {
-	case Header, Content, Map
-}
-
-protocol TableData {
-	var dataType: TableDataType { get set }
-}
 
 struct HeaderData: TableData {
 	
@@ -34,7 +27,14 @@ struct ContentData: TableData {
 struct MapData: TableData {
 
 	var dataType: TableDataType = .Map
-	var mapCenter: CLLocation
-	var mapDots: Array<CLLocation>
+	var mapCenter: CLLocationCoordinate2D
+	var mapPins: Array<MapPin>
+
+}
+
+struct MapPin {
+
+	var pinLocation: CLLocationCoordinate2D
+	var pinTitle: String
 
 }

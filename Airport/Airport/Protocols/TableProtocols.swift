@@ -1,5 +1,5 @@
 //
-//  HeaderCell.swift
+//  TableProtocols.swift
 //  Airport
 //
 //  Created by Charlie on 29/5/19.
@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol TableData {
+	var dataType: TableDataType { get set }
+}
