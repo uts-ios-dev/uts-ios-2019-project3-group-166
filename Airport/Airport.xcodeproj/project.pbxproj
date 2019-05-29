@@ -93,12 +93,9 @@
 				CB1B9E2B2294F9D8002CD2C6 /* Airport.xcdatamodeld */,
 				CBA856DE229DF0AB00390FE4 /* TableController.swift */,
 				CBA856E0229DF93F00390FE4 /* TableCells.swift */,
-<<<<<<< HEAD
-				CBA856E4229DFBAF00390FE4 /* Old Table Data.swift */,
-=======
-				CBA856E4229DFBAF00390FE4 /* TableData.swift */,
+				CBA856E4229DFBAF00390FE4 /* Old Table Data.swift */,				
 				3D7E190F229E0C8300F1AF80 /* FoodController.swift */,
->>>>>>> 5e5ff779a1c855776381d25b1229c9c71f6376eb
+
 			);
 			path = Airport;
 			sourceTree = "<group>";
