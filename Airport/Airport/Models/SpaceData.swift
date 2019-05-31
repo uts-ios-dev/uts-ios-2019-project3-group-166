@@ -1,5 +1,5 @@
 //
-//  TableDataModel.swift
+//  SpaceData.swift
 //  Airport
 //
 //  Created by Charlie on 29/5/19.
@@ -8,6 +8,14 @@
 
 import Foundation
 
-enum TableDataType {
-	case Header, Content, Map, App, Space
+class SpaceData: TableData {
+
+	var dataType: TableDataType
+	
+	init() {
+	
+		self.dataType = .Space
+		
+	}
+
 }

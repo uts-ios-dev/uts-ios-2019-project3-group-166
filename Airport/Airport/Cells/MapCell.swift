@@ -43,15 +43,15 @@ class MapCell: UITableViewCell {
 	
 	func populateCell(passedData: MapData) {
 	
-		mapView.camera = MKMapCamera(lookingAtCenter: passedData.mapCenter, fromDistance: CLLocationDistance(floatLiteral: 900.0), pitch: 0.0, heading: CLLocationDirection(floatLiteral: 0.0))
+		mapView.camera = MKMapCamera(lookingAtCenter: passedData.mapCenter, fromDistance: CLLocationDistance(floatLiteral: 700.0), pitch: 0.0, heading: CLLocationDirection(floatLiteral: 0.0))
 		
 		for eachPin in passedData.mapPins {
 		
-			 let mapPin = MKPointAnnotation()
-			 mapPin.coordinate = eachPin.pinLocation
-			 mapPin.title = eachPin.pinTitle
-			
-			 mapView.addAnnotation(mapPin)
+			let mapPin = MKPointAnnotation()
+			mapPin.coordinate = eachPin.pinLocation
+			mapPin.title = eachPin.pinTitle
+
+			mapView.addAnnotation(mapPin)
 		
 		}
 		

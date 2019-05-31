@@ -21,7 +21,15 @@ class TableController: UITableViewController {
 			MapPin(pinLocation: CLLocationCoordinate2D(latitude: -33.936416, longitude: 151.165605), pinTitle: "Bank"),
 			MapPin(pinLocation: CLLocationCoordinate2D(latitude: -33.936876, longitude: 151.167154), pinTitle: "ATM")
 		]),
-		AppData(appTitle: "TripView", appDescription: "Real time public transport information for Sydney & Melbourne", appID: "id294730339", appIcon: "TripView")
+		SpaceData(),
+		HeaderData(dataType: .Header, headerString: "Header"),
+		ContentData(dataType: .Content, contentString: "Contentkna sdk asdjhas djas djhas djhas djahs dajsh dajsh dajsh dajshd ajs djashd jahs djahs djahsd jahsd jashd jashd jahs djahs djahs djahs djhas djhas djahs djahs djhas djhas djhas djhas djhas djhas djhas d."),
+		AppData(appTitle: "TripView", appDescription: "Real time public transport information for Sydney & Melbourne", appID: "id294730339", appIcon: "TripView"),
+		AppData(appTitle: "TripView", appDescription: "Real time public transport information for Sydney & Melbourne", appID: "id294730339", appIcon: "TripView"),
+		MapData(dataType: .Map, mapCenter: CLLocationCoordinate2D(latitude: -33.936847, longitude: 151.166352), mapPins: [
+			MapPin(pinLocation: CLLocationCoordinate2D(latitude: -33.936416, longitude: 151.165605), pinTitle: "Bank"),
+			MapPin(pinLocation: CLLocationCoordinate2D(latitude: -33.936876, longitude: 151.167154), pinTitle: "ATM")
+		])
 	]
 	
 	override func viewDidLoad() {
@@ -31,6 +39,7 @@ class TableController: UITableViewController {
 		self.tableView.register(ContentCell.self, forCellReuseIdentifier: "ContentCell")
 		self.tableView.register(MapCell.self, forCellReuseIdentifier: "MapCell")
 		self.tableView.register(AppCell.self, forCellReuseIdentifier: "AppCell")
+		self.tableView.register(SpaceCell.self, forCellReuseIdentifier: "SpaceCell")
 		
 		self.tableView.estimatedRowHeight = 88.0
 		self.tableView.rowHeight = UITableView.automaticDimension
@@ -64,6 +73,10 @@ class TableController: UITableViewController {
 			let appCell = self.tableView.dequeueReusableCell(withIdentifier: "AppCell", for: indexPath) as! AppCell
 			appCell.populateCell(passedData: tableData[indexPath.row] as! AppData)
 			return appCell
+			
+			case .Space:
+			let spaceCell = self.tableView.dequeueReusableCell(withIdentifier: "SpaceCell", for: indexPath) as! SpaceCell
+			return spaceCell
 			
 		}
 		
