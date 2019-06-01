@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3D7E1910229E0C8300F1AF80 /* FoodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7E190F229E0C8300F1AF80 /* FoodController.swift */; };
+		C27A37EB22A284D100D65C20 /* RetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A37EA22A284D100D65C20 /* RetailController.swift */; };
+		C27A37ED22A2A55B00D65C20 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A37EC22A2A55B00D65C20 /* MenuCell.swift */; };
+		C27A37EF22A2A70500D65C20 /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27A37EE22A2A70500D65C20 /* MenuData.swift */; };
+		C27A37F322A2B54900D65C20 /* Food.png in Resources */ = {isa = PBXBuildFile; fileRef = C27A37F222A2B54900D65C20 /* Food.png */; };
+		C27A37F522A2B56700D65C20 /* Shopping.png in Resources */ = {isa = PBXBuildFile; fileRef = C27A37F422A2B56700D65C20 /* Shopping.png */; };
+		C27A37F722A2B58000D65C20 /* Currency.png in Resources */ = {isa = PBXBuildFile; fileRef = C27A37F622A2B57F00D65C20 /* Currency.png */; };
+		C27A37F922A2B59800D65C20 /* Transport.png in Resources */ = {isa = PBXBuildFile; fileRef = C27A37F822A2B59800D65C20 /* Transport.png */; };
 		CB1B9E252294F9D8002CD2C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B9E242294F9D8002CD2C6 /* AppDelegate.swift */; };
 		CB1B9E272294F9D8002CD2C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B9E262294F9D8002CD2C6 /* ViewController.swift */; };
 		CB1B9E2A2294F9D8002CD2C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1B9E282294F9D8002CD2C6 /* Main.storyboard */; };
@@ -32,6 +39,13 @@
 
 /* Begin PBXFileReference section */
 		3D7E190F229E0C8300F1AF80 /* FoodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodController.swift; sourceTree = "<group>"; };
+		C27A37EA22A284D100D65C20 /* RetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetailController.swift; sourceTree = "<group>"; };
+		C27A37EC22A2A55B00D65C20 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		C27A37EE22A2A70500D65C20 /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
+		C27A37F222A2B54900D65C20 /* Food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Food.png; path = ../../../../../Downloads/Food.png; sourceTree = "<group>"; };
+		C27A37F422A2B56700D65C20 /* Shopping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shopping.png; sourceTree = "<group>"; };
+		C27A37F622A2B57F00D65C20 /* Currency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Currency.png; sourceTree = "<group>"; };
+		C27A37F822A2B59800D65C20 /* Transport.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Transport.png; sourceTree = "<group>"; };
 		CB1B9E212294F9D8002CD2C6 /* Airport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1B9E242294F9D8002CD2C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB1B9E262294F9D8002CD2C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +115,10 @@
 				CBA856E0229DF93F00390FE4 /* TableCells.swift */,
 				CBA856E4229DFBAF00390FE4 /* Old Table Data.swift */,
 				3D7E190F229E0C8300F1AF80 /* FoodController.swift */,
+				C27A37F422A2B56700D65C20 /* Shopping.png */,
+				C27A37F622A2B57F00D65C20 /* Currency.png */,
+				C27A37F822A2B59800D65C20 /* Transport.png */,
+				C27A37F222A2B54900D65C20 /* Food.png */,
 			);
 			path = Airport;
 			sourceTree = "<group>";
@@ -112,6 +130,7 @@
 				CBA856E9229E158A00390FE4 /* HeaderCell.swift */,
 				CBA856EB229E159300390FE4 /* ContentCell.swift */,
 				CBA856ED229E163800390FE4 /* AppCell.swift */,
+				C27A37EC22A2A55B00D65C20 /* MenuCell.swift */,
 				CBD0BBAA229E8181004B5539 /* SpaceCell.swift */,
 			);
 			path = Cells;
@@ -129,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				CBA856F3229E1A5A00390FE4 /* AppData.swift */,
+				C27A37EE22A2A70500D65C20 /* MenuData.swift */,
 				CBA856F8229E1AE700390FE4 /* TableData.swift */,
 				CBD0BBAC229E825C004B5539 /* SpaceData.swift */,
 			);
@@ -148,6 +168,7 @@
 			children = (
 				CBA856DE229DF0AB00390FE4 /* TableController.swift */,
 				CBD0BBAF229E8447004B5539 /* HomeController.swift */,
+				C27A37EA22A284D100D65C20 /* RetailController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,7 +233,11 @@
 			files = (
 				CB1B9E322294F9DB002CD2C6 /* LaunchScreen.storyboard in Resources */,
 				CB1B9E2F2294F9DB002CD2C6 /* Assets.xcassets in Resources */,
+				C27A37F922A2B59800D65C20 /* Transport.png in Resources */,
+				C27A37F522A2B56700D65C20 /* Shopping.png in Resources */,
 				CB1B9E2A2294F9D8002CD2C6 /* Main.storyboard in Resources */,
+				C27A37F722A2B58000D65C20 /* Currency.png in Resources */,
+				C27A37F322A2B54900D65C20 /* Food.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,9 +250,11 @@
 			files = (
 				CBA856E5229DFBAF00390FE4 /* Old Table Data.swift in Sources */,
 				CBD0BBAB229E8181004B5539 /* SpaceCell.swift in Sources */,
+				C27A37EB22A284D100D65C20 /* RetailController.swift in Sources */,
 				CBA856F0229E16B000390FE4 /* AppViews.swift in Sources */,
 				CBA856F7229E1A8800390FE4 /* TableProtocols.swift in Sources */,
 				CBA856DF229DF0AB00390FE4 /* TableController.swift in Sources */,
+				C27A37ED22A2A55B00D65C20 /* MenuCell.swift in Sources */,
 				3D7E1910229E0C8300F1AF80 /* FoodController.swift in Sources */,
 				CBA856E1229DF93F00390FE4 /* TableCells.swift in Sources */,
 				CBD0BBAD229E825C004B5539 /* SpaceData.swift in Sources */,
@@ -240,6 +267,7 @@
 				CBD0BBB0229E8447004B5539 /* HomeController.swift in Sources */,
 				CBA856E8229E158000390FE4 /* MapCell.swift in Sources */,
 				CBA856F9229E1AE700390FE4 /* TableData.swift in Sources */,
+				C27A37EF22A2A70500D65C20 /* MenuData.swift in Sources */,
 				CB1B9E2D2294F9D9002CD2C6 /* Airport.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
