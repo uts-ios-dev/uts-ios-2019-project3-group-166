@@ -8,25 +8,33 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class HomeController: UITableViewController {
-    
+	
+	let locationManager = CLLocationManager()
+	let registeredAirports: Array<AirportCode> = [.SYD, .MEX]
+	
     let tableData: Array<TableData> = [
-        HeaderData(dataType: .Header, headerString: "Welcome to Sydney Airport"),
-        MenuData(menuTitle: "Transport Information", menuDescription: "Public Transport, Taxi", menuIcon: "Transport"),
-        MenuData(menuTitle: "Currency Exchange", menuDescription: "Currency Exchange, Money Apps", menuIcon: "Currency"),
-        MenuData(menuTitle: "Retail", menuDescription: "Shops, Duty-Free", menuIcon: "Shopping"),
-        MenuData(menuTitle: "Food", menuDescription: "Fast Food, Cafes", menuIcon: "Food")
+//        HeaderData(dataType: .Header, headerString: "Welcome to Sydney Airport"),
+//        MenuData(menuTitle: "Transport Information", menuDescription: "Public Transport, Taxi", menuIcon: "Transport"),
+//        MenuData(menuTitle: "Currency Exchange", menuDescription: "Currency Exchange, Money Apps", menuIcon: "Currency"),
+//        MenuData(menuTitle: "Retail", menuDescription: "Shops, Duty-Free", menuIcon: "Shopping"),
+//        MenuData(menuTitle: "Food", menuDescription: "Fast Food, Cafes", menuIcon: "Food")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+		
+		self.tableView.backgroundColor = UIColor.green
+		
         self.tableView.register(HeaderCell.self, forCellReuseIdentifier: "HeaderCell")
         self.tableView.register(MenuCell.self, forCellReuseIdentifier: "ContentCell")
         
         self.tableView.estimatedRowHeight = 88.0
         self.tableView.rowHeight = UITableView.automaticDimension
+		
+        registeredAirports.map({ createGeofence(passedCode: $0) })
         
     }
     
@@ -87,6 +95,21 @@ class HomeController: UITableViewController {
         }
         
     }
-    
+	
+}
+
+extension HomeController {
+
+	func createGeofence(passedCode: AirportCode) {
+	
+		let airportObject = Airport(airportCode: passedCode)
+	
+		let notificationRegion = CLCircularRegion(center: airportObject.airportLocation, radius: airportObject.airpotRadius, identifier: airportObject.airportCode.rawValue)
+		notificationRegion.notifyOnEntry = true
+		
+		locationManager.startMonitoring(for: notificationRegion)
+	
+	}
+
 }
 
