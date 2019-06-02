@@ -10,7 +10,10 @@ import Foundation
 import UIKit
 import CoreLocation
 
-class TableController: UITableViewController {
+class TableController: UIViewController {
+
+	let navView = NavView(navText: "Transport")
+	let tableView = UITableView()
 
 	let tableData: Array<TableData> = [
 		HeaderData(dataType: .Header, headerString: "Header"),
@@ -35,22 +38,43 @@ class TableController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.tableView.register(HeaderCell.self, forCellReuseIdentifier: "HeaderCell")
-		self.tableView.register(ContentCell.self, forCellReuseIdentifier: "ContentCell")
-		self.tableView.register(MapCell.self, forCellReuseIdentifier: "MapCell")
-		self.tableView.register(AppCell.self, forCellReuseIdentifier: "AppCell")
-		self.tableView.register(SpaceCell.self, forCellReuseIdentifier: "SpaceCell")
+		tableView.delegate = self
+		tableView.dataSource = self
 		
-		self.tableView.estimatedRowHeight = 88.0
-		self.tableView.rowHeight = UITableView.automaticDimension
+		tableView.register(HeaderCell.self, forCellReuseIdentifier: "HeaderCell")
+		tableView.register(ContentCell.self, forCellReuseIdentifier: "ContentCell")
+		tableView.register(MapCell.self, forCellReuseIdentifier: "MapCell")
+		tableView.register(AppCell.self, forCellReuseIdentifier: "AppCell")
+		tableView.register(SpaceCell.self, forCellReuseIdentifier: "SpaceCell")
+		
+		tableView.estimatedRowHeight = 88.0
+		tableView.rowHeight = UITableView.automaticDimension
+		
+		navView.translatesAutoresizingMaskIntoConstraints = false
+		
+		self.view.addSubview(navView)
+		
+		self.view.addConstraints([
+		
+			// Nav View
+			NSLayoutConstraint(item: navView, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leading, multiplier: 1.0, constant: 0),
+			NSLayoutConstraint(item: navView, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant: 0),
+			NSLayoutConstraint(item: self.view!, attribute: .trailing, relatedBy: .equal, toItem: navView, attribute: .trailing, multiplier: 1.0, constant: 0),
+			NSLayoutConstraint(item: navView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 100)
+		
+		])
 	
 	}
 	
-	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+}
+
+extension TableController: UITableViewDelegate, UITableViewDataSource {
+
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return tableData.count
 	}
 	
-	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
 		switch tableData[indexPath.row].dataType {
 			
@@ -82,7 +106,7 @@ class TableController: UITableViewController {
 		
 	}
 	
-	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
 		switch tableData[indexPath.row].dataType {
 		
