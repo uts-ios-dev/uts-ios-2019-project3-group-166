@@ -45,13 +45,13 @@ class MenuCell: UITableViewCell {
         
         self.addConstraints([
             
-            // menu Background
+            // Menu Background
             NSLayoutConstraint(item: menuBackground, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 14),
             NSLayoutConstraint(item: menuBackground, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 10),
             NSLayoutConstraint(item: self, attribute: .trailing, relatedBy: .equal, toItem: menuBackground, attribute: .trailing, multiplier: 1.0, constant: 14),
             NSLayoutConstraint(item: self, attribute: .bottom, relatedBy: .equal, toItem: menuBackground, attribute: .bottom, multiplier: 1.0, constant: 10)
             
-            ])
+		])
         
         menuBackground.addConstraints([
             
@@ -71,7 +71,7 @@ class MenuCell: UITableViewCell {
             NSLayoutConstraint(item: menuDescription, attribute: .top, relatedBy: .equal, toItem: menuTitle, attribute: .bottom, multiplier: 1.0, constant: 2),
             NSLayoutConstraint(item: menuBackground, attribute: .bottom, relatedBy: .greaterThanOrEqual, toItem: menuDescription, attribute: .bottom, multiplier: 1.0, constant: 14)
         
-            ])
+		])
         
     }
     

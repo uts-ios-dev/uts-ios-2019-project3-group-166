@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum TableDataType {
-	case Header, Content, Menu, Map, App, Space
+enum TableDataType: String {
+	case Header, Content, Map, App, Space
 }

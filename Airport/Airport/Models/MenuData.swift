@@ -8,16 +8,14 @@
 
 import Foundation
 
-class MenuData: TableData {
+class MenuData {
     
-    var dataType: TableDataType
     var menuTitle: String
     var menuDescription: String
     var menuIcon: String
     
     init(menuTitle: String, menuDescription: String, menuIcon: String) {
-        
-        self.dataType = .Menu
+		
         self.menuTitle = menuTitle
         self.menuDescription = menuDescription
         self.menuIcon = menuIcon

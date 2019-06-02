@@ -15,25 +15,7 @@ class TableController: UIViewController {
 	let navView = NavView(navText: "Transport")
 	let tableView = UITableView()
 
-	let tableData: Array<TableData> = [
-		HeaderData(dataType: .Header, headerString: "Header"),
-		ContentData(dataType: .Content, contentString: "Contentkna sdk asdjhas djas djhas djhas djahs dajsh dajsh dajsh dajshd ajs djashd jahs djahs djahsd jahsd jashd jashd jahs djahs djahs djahs djhas djhas djahs djahs djhas djhas djhas djhas djhas djhas djhas d."),
-		AppData(appTitle: "TripView", appDescription: "Real time public transport information for Sydney & Melbourne", appID: "id294730339", appIcon: "TripView"),
-		AppData(appTitle: "TripView", appDescription: "Real time public transport information for Sydney & Melbourne", appID: "id294730339", appIcon: "TripView"),
-		MapData(dataType: .Map, mapCenter: CLLocationCoordinate2D(latitude: -33.936847, longitude: 151.166352), mapPins: [
-			MapPin(pinLocation: CLLocationCoordinate2D(latitude: -33.936416, longitude: 151.165605), pinTitle: "Bank"),
-			MapPin(pinLocation: CLLocationCoordinate2D(latitude: -33.936876, longitude: 151.167154), pinTitle: "ATM")
-		]),
-		SpaceData(),
-		HeaderData(dataType: .Header, headerString: "Header"),
-		ContentData(dataType: .Content, contentString: "Contentkna sdk asdjhas djas djhas djhas djahs dajsh dajsh dajsh dajshd ajs djashd jahs djahs djahsd jahsd jashd jashd jahs djahs djahs djahs djhas djhas djahs djahs djhas djhas djhas djhas djhas djhas djhas d."),
-		AppData(appTitle: "TripView", appDescription: "Real time public transport information for Sydney & Melbourne", appID: "id294730339", appIcon: "TripView"),
-		AppData(appTitle: "TripView", appDescription: "Real time public transport information for Sydney & Melbourne", appID: "id294730339", appIcon: "TripView"),
-		MapData(dataType: .Map, mapCenter: CLLocationCoordinate2D(latitude: -33.936847, longitude: 151.166352), mapPins: [
-			MapPin(pinLocation: CLLocationCoordinate2D(latitude: -33.936416, longitude: 151.165605), pinTitle: "Bank"),
-			MapPin(pinLocation: CLLocationCoordinate2D(latitude: -33.936876, longitude: 151.167154), pinTitle: "ATM")
-		])
-	]
+	let tableData: Array<TableData> = []
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -98,11 +80,6 @@ extension TableController: UITableViewDelegate, UITableViewDataSource {
 			appCell.populateCell(passedData: tableData[indexPath.row] as! AppData)
 			return appCell
             
-            case .Menu:
-            let menuCell = self.tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! AppCell
-            menuCell.populateCell(passedData: tableData[indexPath.row] as! AppData)
-            return menuCell
- 
 			case .Space:
 			let spaceCell = self.tableView.dequeueReusableCell(withIdentifier: "SpaceCell", for: indexPath) as! SpaceCell
 			return spaceCell

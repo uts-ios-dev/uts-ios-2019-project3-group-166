@@ -16,7 +16,9 @@ class AppData: TableData {
 	var appURL: URL
 	var appIcon: String
 	
-	init(appTitle: String, appDescription: String, appID: String, appIcon: String) {
+	init?(passedDictionary: Dictionary<String, Any>) {
+	
+		guard let appTitle = passedDictionary["title"] as? String, let appDescription = passedDictionary["description"] as? String, let appID = passedDictionary["id"] as? String, let appIcon = passedDictionary["icon"] as? String else { return nil }
 	
 		self.dataType = .App
 		self.appTitle = appTitle

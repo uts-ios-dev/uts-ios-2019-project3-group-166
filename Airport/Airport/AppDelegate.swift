@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
 	var locationManager: CLLocationManager?
 	var notificationCenter: UNUserNotificationCenter?
+	
+	weak var airportDelegate: AirportDelegate?
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 	
@@ -30,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.notificationCenter?.requestAuthorization(options: [.sound, .alert, .badge], completionHandler: { (allowed, error) in return })
 		
 		let rootController = HomeController()
+		airportDelegate = rootController
 		
 		self.window = UIWindow(frame: UIScreen.main.bounds)
 		self.window?.rootViewController = rootController
@@ -94,19 +97,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: CLLocationManagerDelegate {
 	
+	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            print("Found user's location: \(location)")
+        }
+    }
+	
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
 		
 		guard let circularRegion = region as? CLCircularRegion, let airportCode = AirportCode(rawValue: circularRegion.identifier) else { return }
 		
-		let airportObject = Airport(airportCode: airportCode)
+		airportDelegate?.updateAirport(passedCode: airportCode)
+		let airportNotification = AirportNotification(airportCode: airportCode)
 		
-		let airportNotification = UNMutableNotificationContent()
-		airportNotification.title = airportObject.notificationTitle
-		airportNotification.subtitle = airportObject.notificationSubtitle
-		airportNotification.body = airportObject.notificationBody
-		airportNotification.sound = UNNotificationSound.default
+		let notificationContent = UNMutableNotificationContent()
+		notificationContent.title = airportNotification.notificationTitle
+		notificationContent.subtitle = airportNotification.notificationSubtitle
+		notificationContent.body = airportNotification.notificationBody
+		notificationContent.sound = UNNotificationSound.default
 		
-		let notificationRequest = UNNotificationRequest(identifier: circularRegion.identifier, content: airportNotification, trigger: UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false))
+		let notificationRequest = UNNotificationRequest(identifier: circularRegion.identifier, content: notificationContent, trigger: UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false))
 	
 		notificationCenter?.add(notificationRequest, withCompletionHandler: { (error) in
 		
