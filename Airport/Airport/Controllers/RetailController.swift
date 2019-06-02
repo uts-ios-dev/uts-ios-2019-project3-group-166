@@ -1,29 +1,31 @@
 //
-//  HomeController.swift
+//  RetailController.swift
 //  Airport
 //
-//  Created by Charlie on 29/5/19.
+//  Created by Yasmin Zaidi on 1/6/19.
 //  Copyright © 2019 UTS. All rights reserved.
 //
 
 import Foundation
-import UIKit
+/* import UIKit
+import CoreLocation
 
-class HomeController: UITableViewController {
+class RetailController: UITableViewController {
     
     let tableData: Array<TableData> = [
-        HeaderData(dataType: .Header, headerString: "Welcome to Sydney Airport"),
-        MenuData(menuTitle: "Transport Information", menuDescription: "Public Transport, Taxi", menuIcon: "Transport"),
-        MenuData(menuTitle: "Currency Exchange", menuDescription: "Currency Exchange, Money Apps", menuIcon: "Currency"),
-        MenuData(menuTitle: "Retail", menuDescription: "Shops, Duty-Free", menuIcon: "Shopping"),
-        MenuData(menuTitle: "Food", menuDescription: "Fast Food, Cafes", menuIcon: "Food")
+        HeaderData(dataType: .Header, headerString: "Retail"),
+        ContentData(dataType: .Content, contentString: "Contentkna sdk asdjhas djas djhas djhas djahs dajsh dajsh dajsh dajshd ajs djashd jahs djahs djahsd jahsd jashd jashd jahs djahs djahs djahs djhas djhas djahs djahs djhas djhas djhas djhas djhas djhas djhas d."),
+        SpaceData(),
+        HeaderData(dataType: .Header, headerString: "Header"),
+        ContentData(dataType: .Content, contentString: "Contentkna sdk asdjhas djas djhas djhas djahs dajsh dajsh dajsh dajshd ajs djashd jahs djahs djahsd jahsd jashd jashd jahs djahs djahs djahs djhas djhas djahs djahs djhas djhas djhas djhas djhas djhas djhas d.")
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.register(HeaderCell.self, forCellReuseIdentifier: "HeaderCell")
-        self.tableView.register(MenuCell.self, forCellReuseIdentifier: "ContentCell")
+        self.tableView.register(ContentCell.self, forCellReuseIdentifier: "ContentCell")
+        self.tableView.register(SpaceCell.self, forCellReuseIdentifier: "SpaceCell")
         
         self.tableView.estimatedRowHeight = 88.0
         self.tableView.rowHeight = UITableView.automaticDimension
@@ -89,4 +91,4 @@ class HomeController: UITableViewController {
     }
     
 }
-
+ */

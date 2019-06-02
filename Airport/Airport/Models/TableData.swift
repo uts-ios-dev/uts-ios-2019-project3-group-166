@@ -9,5 +9,5 @@
 import Foundation
 
 enum TableDataType {
-	case Header, Content, Map, App, Space
+	case Header, Content, Menu, Map, App, Space
 }

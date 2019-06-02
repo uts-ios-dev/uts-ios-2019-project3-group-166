@@ -76,7 +76,7 @@ extension TableController: UITableViewDelegate, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
-		switch tableData[indexPath.row].dataType {
+        switch tableData[indexPath.row].dataType {
 			
 			case .Header:
 			let headerCell = self.tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as! HeaderCell
@@ -97,11 +97,17 @@ extension TableController: UITableViewDelegate, UITableViewDataSource {
 			let appCell = self.tableView.dequeueReusableCell(withIdentifier: "AppCell", for: indexPath) as! AppCell
 			appCell.populateCell(passedData: tableData[indexPath.row] as! AppData)
 			return appCell
-			
+            
+            case .Menu:
+            let menuCell = self.tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! AppCell
+            menuCell.populateCell(passedData: tableData[indexPath.row] as! AppData)
+            return menuCell
+ 
 			case .Space:
 			let spaceCell = self.tableView.dequeueReusableCell(withIdentifier: "SpaceCell", for: indexPath) as! SpaceCell
 			return spaceCell
-			
+            
+            
 		}
 		
 	}
