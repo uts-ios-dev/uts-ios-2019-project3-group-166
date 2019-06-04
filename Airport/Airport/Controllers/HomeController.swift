@@ -20,7 +20,7 @@ class HomeController: UIViewController {
 	
 	var airportData = AirportData()
 	
-	var airportLocations: Array<AirportLocation> = Array<AirportCode>.init([.SYD, .MEX]).map({ AirportLocation(airportCode: $0)
+	var airportLocations: Array<AirportLocation> = Array<AirportCode>.init([.SYD, .MEX, .NZWD, .BEG, .CDG]).map({ AirportLocation(airportCode: $0)
 	})
 	
 	let locationManager = CLLocationManager()
@@ -47,9 +47,10 @@ class HomeController: UIViewController {
 		headerView.layer.cornerRadius = 30
 		headerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
 		
-		headerLabel.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
+		headerLabel.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
 		headerLabel.text = airportData.airportHeader
 		headerLabel.numberOfLines = 0
+		headerLabel.lineBreakMode = .byWordWrapping
 		
         tableView.estimatedRowHeight = 88.0
         tableView.rowHeight = UITableView.automaticDimension
@@ -57,7 +58,7 @@ class HomeController: UIViewController {
         tableView.backgroundColor = UIColor.clear
         tableView.showsVerticalScrollIndicator = false
 		
-		mapView.isUserInteractionEnabled = false
+//		mapView.isUserInteractionEnabled = false
 		mapView.showsUserLocation = true
 		
 		mapView.translatesAutoresizingMaskIntoConstraints = false
@@ -74,9 +75,9 @@ class HomeController: UIViewController {
 		
 			// Header Label
 			NSLayoutConstraint(item: headerLabel, attribute: .leading, relatedBy: .equal, toItem: headerView, attribute: .leading, multiplier: 1.0, constant: 20),
-			NSLayoutConstraint(item: headerLabel, attribute: .top, relatedBy: .equal, toItem: headerView, attribute: .top, multiplier: 1.0, constant: 30),
+			NSLayoutConstraint(item: headerLabel, attribute: .top, relatedBy: .equal, toItem: headerView, attribute: .top, multiplier: 1.0, constant: 28),
 			NSLayoutConstraint(item: headerView, attribute: .trailing, relatedBy: .equal, toItem: headerLabel, attribute: .trailing, multiplier: 1.0, constant: 20),
-			NSLayoutConstraint(item: headerView, attribute: .bottom, relatedBy: .equal, toItem: headerLabel, attribute: .bottom, multiplier: 1.0, constant: 10)
+			NSLayoutConstraint(item: headerView, attribute: .bottom, relatedBy: .equal, toItem: headerLabel, attribute: .bottom, multiplier: 1.0, constant: 14)
 		
 		])
 		

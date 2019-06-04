@@ -20,6 +20,9 @@
 		CB1B9E2D2294F9D9002CD2C6 /* Airport.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CB1B9E2B2294F9D8002CD2C6 /* Airport.xcdatamodeld */; };
 		CB1B9E2F2294F9DB002CD2C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB1B9E2E2294F9DB002CD2C6 /* Assets.xcassets */; };
 		CB1B9E322294F9DB002CD2C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB1B9E302294F9DB002CD2C6 /* LaunchScreen.storyboard */; };
+		CB239FAF22A72BCD00A2C4E9 /* CDG.json in Resources */ = {isa = PBXBuildFile; fileRef = CB239FAE22A72BCD00A2C4E9 /* CDG.json */; };
+		CB239FB122A7317B00A2C4E9 /* BEG.json in Resources */ = {isa = PBXBuildFile; fileRef = CB239FB022A7317B00A2C4E9 /* BEG.json */; };
+		CB239FB322A7318600A2C4E9 /* NZWD.json in Resources */ = {isa = PBXBuildFile; fileRef = CB239FB222A7318600A2C4E9 /* NZWD.json */; };
 		CB6C6ECE22A1135100DDEBD8 /* NavViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6C6ECD22A1135100DDEBD8 /* NavViews.swift */; };
 		CB7CFA7022A383F500B69D89 /* AirportData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7CFA6F22A383F500B69D89 /* AirportData.swift */; };
 		CB7CFA7322A391A700B69D89 /* SYD.json in Resources */ = {isa = PBXBuildFile; fileRef = CB7CFA7222A391A700B69D89 /* SYD.json */; };
@@ -63,6 +66,9 @@
 		CB1B9E2E2294F9DB002CD2C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB1B9E312294F9DB002CD2C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB1B9E332294F9DB002CD2C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB239FAE22A72BCD00A2C4E9 /* CDG.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CDG.json; sourceTree = "<group>"; };
+		CB239FB022A7317B00A2C4E9 /* BEG.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BEG.json; sourceTree = "<group>"; };
+		CB239FB222A7318600A2C4E9 /* NZWD.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NZWD.json; sourceTree = "<group>"; };
 		CB6C6ECD22A1135100DDEBD8 /* NavViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViews.swift; sourceTree = "<group>"; };
 		CB7CFA6F22A383F500B69D89 /* AirportData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportData.swift; sourceTree = "<group>"; };
 		CB7CFA7222A391A700B69D89 /* SYD.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SYD.json; sourceTree = "<group>"; };
@@ -146,6 +152,9 @@
 			children = (
 				CB7CFA7222A391A700B69D89 /* SYD.json */,
 				CB7CFA7422A395F500B69D89 /* MEX.json */,
+				CB239FAE22A72BCD00A2C4E9 /* CDG.json */,
+				CB239FB022A7317B00A2C4E9 /* BEG.json */,
+				CB239FB222A7318600A2C4E9 /* NZWD.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -269,9 +278,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB239FAF22A72BCD00A2C4E9 /* CDG.json in Resources */,
 				CB7CFA7522A395F500B69D89 /* MEX.json in Resources */,
 				CB1B9E322294F9DB002CD2C6 /* LaunchScreen.storyboard in Resources */,
 				CB1B9E2F2294F9DB002CD2C6 /* Assets.xcassets in Resources */,
+				CB239FB122A7317B00A2C4E9 /* BEG.json in Resources */,
+				CB239FB322A7318600A2C4E9 /* NZWD.json in Resources */,
 				C27A37F922A2B59800D65C20 /* Transport.png in Resources */,
 				C27A37F522A2B56700D65C20 /* Shopping.png in Resources */,
 				CB1B9E2A2294F9D8002CD2C6 /* Main.storyboard in Resources */,

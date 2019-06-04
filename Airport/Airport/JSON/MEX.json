@@ -71,5 +71,46 @@
     }, {
       "type": "Space"
     }
+  ],
+  "restaurants": [
+  	{
+      "type": "Space"
+    }, {
+      "type": "Header",
+      "header": "Food & Drink"
+    }, {
+      "type": "Content",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis dui tortor, in fringilla arcu iaculis a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc quis nisi sed est fringilla commodo. Suspendisse auctor ac ante non interdum. Proin imperdiet nulla in tortor ultricies, sed varius dolor volutpat."
+    }, {
+      "type": "Vendor",
+      "title": "Hamburger Joint",
+      "description": "A cheap spot to grab a delicious hamburger",
+      "icon": "Burger",
+      "stars": 4
+	}, {
+      "type": "Vendor",
+      "title": "Wine Bar",
+      "description": "Very expensive wine and rude staff",
+      "icon": "Wine",
+      "stars": 1
+	}, {
+      "type": "Map",
+      "latitude": -33.936847,
+      "longitude": 151.166352,
+      "pins": [
+        {
+          "title": "Hamburger Joint",
+          "latitude": -33.936416,
+          "longitude": 151.165605
+        },
+        {
+          "title": "Wine Bar",
+          "latitude": -33.936876,
+          "longitude": 151.167154
+        }
+      ]
+    }, {
+	  "type": "Space"
+	}
   ]
 }

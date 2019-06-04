@@ -10,7 +10,7 @@ import Foundation
 import CoreLocation
 
 enum AirportCode: String {
-	case SYD, MEX
+	case SYD, MEX, CDG, BEG, NZWD
 }
 
 struct AirportLocation {
@@ -40,6 +40,24 @@ struct AirportLocation {
 			self.airportRadius = 2000
 			self.airportName = "Mexico City International Airport"
 			self.airportEmoji = "🇲🇽"
+			
+			case .CDG:
+			self.airportLocation = CLLocationCoordinate2D(latitude: 49.007790, longitude: 2.542431)
+			self.airportRadius = 4000
+			self.airportName = "Paris Charles De Gaulle"
+			self.airportEmoji = "🇫🇷"
+			
+			case .BEG:
+			self.airportLocation = CLLocationCoordinate2D(latitude: 44.821069, longitude: 20.295619)
+			self.airportRadius = 2000
+			self.airportName = "Belgrade Nikola Tesla Airport"
+			self.airportEmoji = "🇷🇸"
+
+			case .NZWD:
+			self.airportLocation = CLLocationCoordinate2D(latitude: -77.8400829, longitude: 166.6445299)
+			self.airportRadius = 3000
+			self.airportName = "McMurdo Air Station"
+			self.airportEmoji = "🇦🇶"
 			
 		}
 	
@@ -71,6 +89,21 @@ struct AirportNotification {
 			self.notificationTitle = "Hola!"
 			self.notificationSubtitle = "Welcome to Mexico City International Aiport"
 			self.notificationBody = "Come check out all the latest deals, find currency exchanges and transport information."
+			
+			case .CDG:
+			self.notificationTitle = "Bonjour!"
+			self.notificationSubtitle = "Welcome to Paris Charles De Gaulle"
+			self.notificationBody = "Come check out all the latest deals, find currency exchanges and transport information."
+			
+			case .BEG:
+			self.notificationTitle = "Dobar Dan!"
+			self.notificationSubtitle = "Welcome to Belgrade Nikola Tesla Aiport"
+			self.notificationBody = "Come check out all the latest deals, find currency exchanges and transport information."
+			
+			case .NZWD:
+			self.notificationTitle = "Brrrrrr!"
+			self.notificationSubtitle = "Welcome to McMurdo Air Station"
+			self.notificationBody = "There is not much here. Our Frozen Slushies are pretty good though."
 		
 		}
 	
@@ -107,7 +140,7 @@ struct AirportData {
 	
 		guard let jsonPath = Bundle.main.path(forResource: passedCode.rawValue, ofType: "json"), let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath), options: .mappedIfSafe), let jsonSerialised = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments), let jsonDictionary = jsonSerialised as? Dictionary<String, Any> else {
 		
-			self.airportHeader = "Error loading JSON data"
+			self.airportHeader = "Error loading JSON data for \(passedCode.rawValue)"
 			self.airportImage = ""
 			
 			return
@@ -189,7 +222,7 @@ struct AirportData {
 	mutating func errorLocating() {
 	
 		self.airportCode = nil
-		self.airportHeader = "Thinking..."
+		self.airportHeader = "🧠 Thinking..."
 		self.airportImage = ""
 		self.transportData = []
 		self.homeData = []
