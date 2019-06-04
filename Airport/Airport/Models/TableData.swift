@@ -9,5 +9,5 @@
 import Foundation
 
 enum TableDataType: String {
-	case Header, Content, Map, App, Space
+	case Header, Content, Map, App, Space, Vendor, Exchange
 }

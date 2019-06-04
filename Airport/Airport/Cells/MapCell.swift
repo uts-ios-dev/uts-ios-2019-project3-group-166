@@ -21,6 +21,9 @@ class MapCell: UITableViewCell {
 	
 		mapView.translatesAutoresizingMaskIntoConstraints = false
 		mapView.isUserInteractionEnabled = false
+		mapView.showsBuildings = true
+		mapView.showsUserLocation = true
+		mapView.showsPointsOfInterest = true
 		
 		self.addSubview(mapView)
 		

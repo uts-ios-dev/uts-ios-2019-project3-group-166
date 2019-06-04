@@ -97,22 +97,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: CLLocationManagerDelegate {
 	
-	func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            print("Found user's location: \(location)")
-        }
-    }
-	
     func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
 		
 		guard let circularRegion = region as? CLCircularRegion, let airportCode = AirportCode(rawValue: circularRegion.identifier) else { return }
 		
 		airportDelegate?.updateAirport(passedCode: airportCode)
-		let airportNotification = AirportNotification(airportCode: airportCode)
+		let airportNotification = AirportNotification(airportLocation: AirportLocation(airportCode: airportCode))
 		
 		let notificationContent = UNMutableNotificationContent()
 		notificationContent.title = airportNotification.notificationTitle
-		notificationContent.subtitle = airportNotification.notificationSubtitle
+		notificationContent.subtitle = airportNotification.notificationSubtitle + " \(airportNotification.airportLocation.airportEmoji)"
 		notificationContent.body = airportNotification.notificationBody
 		notificationContent.sound = UNNotificationSound.default
 		
@@ -134,15 +128,16 @@ extension AppDelegate: CLLocationManagerDelegate {
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
 
-//	func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-//<#code#>
-//}
+	func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+
+		print("DID RECIEVE")
+		print("Action: \(response.actionIdentifier)")
+		print("Identifier: \(response.notification.request.identifier)")
+
+	}
 
 	func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-		
-		print("NOTIFICATION")
-		
-        completionHandler(.alert)
+        completionHandler([.alert, .sound])
     }
 
 }

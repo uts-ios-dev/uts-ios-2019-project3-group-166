@@ -17,7 +17,7 @@ struct MapPin {
 	
 	init?(passedDictionary: Dictionary<String, Any>) {
 	
-		guard let pinLatitude = passedDictionary["latitude"] as? Double, let pinLongitude = passedDictionary["longitude"] as? Double, let pinTitle = passedDictionary["latitude"] as? String else { return nil }
+		guard let pinLatitude = passedDictionary["latitude"] as? Double, let pinLongitude = passedDictionary["longitude"] as? Double, let pinTitle = passedDictionary["title"] as? String else { return nil }
 		
 		self.pinLocation = CLLocationCoordinate2D(latitude: pinLatitude, longitude: pinLongitude)
 		self.pinTitle = pinTitle

@@ -3,6 +3,8 @@
   "image": "MexicoCity-Image",
   "transport": [
     {
+      "type": "Space"
+    }, {
       "type": "Header",
       "header": "Public Transport"
     }, {
@@ -66,7 +68,8 @@
           "longitude": 151.167154
         }
       ]
+    }, {
+      "type": "Space"
     }
-	
   ]
 }

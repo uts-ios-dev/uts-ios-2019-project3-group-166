@@ -14,6 +14,7 @@ class AppData: TableData {
 	var appTitle: String
 	var appDescription: String
 	var appURL: URL
+	var storeURL: URL
 	var appIcon: String
 	
 	init?(passedDictionary: Dictionary<String, Any>) {
@@ -23,8 +24,10 @@ class AppData: TableData {
 		self.dataType = .App
 		self.appTitle = appTitle
 		self.appDescription = appDescription
-		self.appURL = URL(string: "itms-apps://itunes.apple.com/au/app/\(appID)")!
 		self.appIcon = appIcon
+	
+		self.appURL = URL(string: "itms-apps://itunes.apple.com/au/app/\(appID)")!
+		self.storeURL = URL(string: "https://itunes.apple.com/app/\(appID)")!
 	
 	}
 
